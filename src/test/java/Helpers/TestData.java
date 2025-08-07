@@ -3,7 +3,7 @@ package Helpers;
 public class TestData {
     public static final String VALID_NAME = "John";
     public static final String VALID_PASSWORD = "p@ssw0rd";
-    public static final String EXISTING_EMAIL = "m@gmail.com";
+    public static final String EXISTING_EMAIL = "m19@gmail.com";
     public static final String UNIQUE_EMAIL = "M" + System.currentTimeMillis() + "@gmail.com";
 
     public static final int BIRTH_DAY = 20;
@@ -20,4 +20,7 @@ public class TestData {
     public static final String CITY = "RedMounted";
     public static final int ZIP_CODE = 203040;
     public static final String MOBILE = "+20304050";
+
+    public static final String Wrong_EMAIL = "testtest@gmail.com";
+    public static final String Wrong_PASSWORD = "testtest";
 }

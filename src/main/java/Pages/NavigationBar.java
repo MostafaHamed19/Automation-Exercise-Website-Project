@@ -11,6 +11,7 @@ public class NavigationBar extends BasePage{
     By LoginAndSignUpPageNavBtn = By.partialLinkText("Signup");
     By ProductsPageNavBtn = By.linkText("Products");
     By CartPageNavBtn = By.linkText("Cart");
+    public static By LoggedInUserNavBtn = By.partialLinkText("Logged in");
 
     public void ClickOnLoginAndSignUpPageNavBtn() {
         driver.findElement(LoginAndSignUpPageNavBtn).click();
