@@ -9,11 +9,12 @@ public class NavigationBar extends BasePage{
     }
     By HomePageNavBtn = By.linkText("Home");
     By LoginAndSignUpPageNavBtn = By.partialLinkText("Signup");
-    By ProductsPageNavBtn = By.linkText("Products");
+    By ProductsPageNavBtn = By.cssSelector("a[href='/products']");
     By CartPageNavBtn = By.linkText("Cart");
     public static By LoggedInUserNavBtn = By.partialLinkText("Logged in");
 
     public void ClickOnLoginAndSignUpPageNavBtn() {
         driver.findElement(LoginAndSignUpPageNavBtn).click();
     }
+    public void ClickOnProductPageNavBtn(){ driver.findElement(ProductsPageNavBtn).click();}
 }
