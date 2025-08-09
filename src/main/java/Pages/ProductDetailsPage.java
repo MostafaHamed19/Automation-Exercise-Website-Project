@@ -15,6 +15,7 @@ public class ProductDetailsPage extends BasePage{
      By SuccessfulMessage = By.cssSelector(".modal-content");
      By SuccessMessageHeader = By.cssSelector(".modal-title.w-100");
      By SuccessMessageParagraph = By.cssSelector(".modal-body .text-center");
+     public static By ViewCartButton = By.xpath("//u[normalize-space()='View Cart']");
 
      public String getProductName() {
          return driver.findElement(ProductName).getText();
@@ -37,5 +38,8 @@ public class ProductDetailsPage extends BasePage{
      }
      public String getSuccessMessageParagraph() {
          return driver.findElement(SuccessMessageParagraph).getText();
+     }
+     public void clickViewCartButton() {
+         driver.findElement(ViewCartButton).click();
      }
 }

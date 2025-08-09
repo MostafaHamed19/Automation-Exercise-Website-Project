@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
+import static Pages.ProductDetailsPage.ViewCartButton;
+
 public class ProductPage extends BasePage{
     public ProductPage(WebDriver driver) {
         super(driver);
@@ -38,8 +40,16 @@ public class ProductPage extends BasePage{
         return driver.findElement(ProductList).findElement(By.cssSelector(".col-sm-4")).findElement(By.cssSelector("div.productinfo.text-center > "+tag));
     }
     public void clickOnFirstProductDetails() {
-        WebElement firstProduct=driver.findElement(By.cssSelector("a[href='/product_details/1']"));
+        WebElement firstProduct=driver.findElement(By.xpath("(//a[contains(text(),'View Product')])[1]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", firstProduct);
         firstProduct.click();
+    }
+    public void clickOnAddToCartFirstProduct() {
+        WebElement firstProduct=driver.findElement(By.cssSelector(".btn.btn-default.add-to-cart"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", firstProduct);
+        firstProduct.click();
+    }
+    public void clickViewCartButton() {
+        driver.findElement(ViewCartButton).click();
     }
 }

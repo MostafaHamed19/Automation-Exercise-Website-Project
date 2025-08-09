@@ -17,4 +17,5 @@ public class NavigationBar extends BasePage{
         driver.findElement(LoginAndSignUpPageNavBtn).click();
     }
     public void ClickOnProductPageNavBtn(){ driver.findElement(ProductsPageNavBtn).click();}
+    public void clickOnCartPageNavBtn(){ driver.findElement(CartPageNavBtn).click(); }
 }

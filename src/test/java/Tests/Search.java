@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Search extends BaseTest{
     @Test
-    public void SearchOnProductTest() throws InterruptedException {
+    public void SearchOnProductTest() {
         NavigationBar navigationBar = new NavigationBar(driver);
         navigationBar.ClickOnProductPageNavBtn();
         ProductPage productPage = new ProductPage(driver);
