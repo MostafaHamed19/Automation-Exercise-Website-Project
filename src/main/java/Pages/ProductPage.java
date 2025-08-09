@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -32,5 +33,13 @@ public class ProductPage extends BasePage{
                 return false;
         }
         return true;
+    }
+    public WebElement getFirstElementText(String tag) {
+        return driver.findElement(ProductList).findElement(By.cssSelector(".col-sm-4")).findElement(By.cssSelector("div.productinfo.text-center > "+tag));
+    }
+    public void clickOnFirstProductDetails() {
+        WebElement firstProduct=driver.findElement(By.cssSelector("a[href='/product_details/1']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", firstProduct);
+        firstProduct.click();
     }
 }
