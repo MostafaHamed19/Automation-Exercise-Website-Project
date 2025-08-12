@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Pages.ProductDetailsPage.ViewCartButton;
+import static pages.ProductDetailsPage.ViewCartButton;
 
 public class ProductPage extends BasePage{
     public ProductPage(WebDriver driver) {

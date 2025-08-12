@@ -1,13 +1,12 @@
-package Tests;
+package tests;
 
-import Pages.*;
+import pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Helpers.TestData.EXISTING_EMAIL;
-import static Helpers.TestData.VALID_PASSWORD;
+import static utilities.TestData.*;
 
-public class CheckOut extends BaseTest{
+public class CheckOutTest extends TestBase {
     @Test
     public void checkOut() {
         NavigationBar navBar = new NavigationBar(driver);
@@ -22,7 +21,7 @@ public class CheckOut extends BaseTest{
         CartPage cartPage = new CartPage(driver);
         cartPage.clickProceedToCheckout();
         cartPage.clickPlaceOrder();
-        cartPage.FillCardInformation("John","1111222233334444","1234","12","2030");
+        cartPage.FillCardInformation(VALID_NAME,NUMBER,CVV,EXPIRY_MONTH,EXPIRY_YEAR);
         cartPage.ClickOnPaymentButton();
         String status = cartPage.getOrderStatus();
         String successMsg = cartPage.getSuccessMessage();

@@ -1,12 +1,14 @@
-package Tests;
+package tests;
 
+import utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.time.Duration;
 
-public class BaseTest {
+public class TestBase {
     public WebDriver driver;
     public WebDriverWait wait;
     @BeforeClass
@@ -20,6 +22,16 @@ public class BaseTest {
     public void CloseBrowser() {
         if (driver != null) {
             driver.quit();
+        }
+    }
+    @AfterMethod
+    public void screenshotOnFailure(ITestResult result)
+    {
+        if (result.getStatus() == ITestResult.FAILURE)
+        {
+            System.out.println("Failed!");
+            System.out.println("Taking Screenshot....");
+            Helper.captureScreenshot(driver, result.getName());
         }
     }
 }

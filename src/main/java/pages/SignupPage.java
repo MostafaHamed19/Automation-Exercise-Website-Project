@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -26,6 +26,8 @@ public class SignupPage extends BasePage {
     By ZipcodeField = By.id("zipcode");
     By MobileNumberField = By.id("mobile_number");
     By CreateAccountButton = By.cssSelector("button[data-qa='create-account']");
+    By ContinueButton = By.cssSelector("button[data-qa='continue-button']");
+
     public static By CreatedAccountMessage = By.cssSelector("h2[data-qa='account-created']");
 
     public void EnterValidCredentials(char gender,String name,String password,int days,String months,int years,
@@ -59,6 +61,9 @@ public class SignupPage extends BasePage {
     }
     public void ClickOnCreateAccountButton() {
         driver.findElement(CreateAccountButton).click();
+    }
+    public void ClickOnContinueButton() {
+        driver.findElement(ContinueButton).click();
     }
 
 }
