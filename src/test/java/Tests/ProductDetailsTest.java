@@ -1,12 +1,12 @@
-package Tests;
+package tests;
 
-import Pages.NavigationBar;
-import Pages.ProductDetailsPage;
-import Pages.ProductPage;
+import pages.NavigationBar;
+import pages.ProductDetailsPage;
+import pages.ProductPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ProductDetails extends BaseTest{
+public class ProductDetailsTest extends TestBase {
     @Test
     public void VerifyProductDetailsTest(){
         NavigationBar navBar = new NavigationBar(driver);

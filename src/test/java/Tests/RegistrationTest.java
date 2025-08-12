@@ -1,19 +1,17 @@
-package Tests;
+package tests;
 
-import Helpers.TestData;
-import Pages.LoginAndSignupPage;
-import Pages.NavigationBar;
-import Pages.SignupPage;
+import utilities.TestData;
+import pages.LoginAndSignupPage;
+import pages.NavigationBar;
+import pages.SignupPage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import static pages.LoginAndSignupPage.SignUpErrorMsg;
+import static pages.SignupPage.CreatedAccountMessage;
+import static utilities.TestData.*;
 
-
-import static Pages.LoginAndSignupPage.SignUpErrorMsg;
-import static Pages.SignupPage.CreatedAccountMessage;
-import static Helpers.TestData.*;
-
-public class Register extends BaseTest{
+public class RegistrationTest extends TestBase {
     @Test
     public void ValidRegisterTest() {
         NavigationBar navBar = new NavigationBar(driver);

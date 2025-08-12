@@ -1,15 +1,16 @@
-package Tests;
+package tests;
 
-import Pages.CartPage;
-import Pages.NavigationBar;
-import Pages.ProductDetailsPage;
-import Pages.ProductPage;
+import pages.CartPage;
+import pages.NavigationBar;
+import pages.ProductDetailsPage;
+import pages.ProductPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Pages.CartPage.TotalProductPrice;
+import static pages.CartPage.TotalProductPrice;
+import static utilities.TestData.PRODUCT_QUANTITY;
 
-public class AddToCart extends BaseTest{
+public class AddToCartTest extends TestBase {
     @Test
     public void addToCart() throws InterruptedException {
         NavigationBar navBar = new NavigationBar(driver);
@@ -17,10 +18,9 @@ public class AddToCart extends BaseTest{
         ProductPage productPage = new ProductPage(driver);
         productPage.clickOnFirstProductDetails();
         ProductDetailsPage productDetailsPage = new ProductDetailsPage(driver);
-        int ProductQuantity = 2;
         String actualPriceText= productDetailsPage.getProductPrice();
         int actualPrice = Integer.parseInt(actualPriceText.replace("Rs.", "").trim());
-        productDetailsPage.setProductQuantity(ProductQuantity);
+        productDetailsPage.setProductQuantity(PRODUCT_QUANTITY);
         productDetailsPage.clickAddToCart();
         Thread.sleep(2000);
         Assert.assertTrue(productDetailsPage.isSuccessfulMessageDisplayed());
@@ -30,6 +30,6 @@ public class AddToCart extends BaseTest{
         CartPage cartPage = new CartPage(driver);
         String totalPriceText = driver.findElement(TotalProductPrice).getText();
         int totalPrice = Integer.parseInt(totalPriceText.replace("Rs.", "").trim());
-        Assert.assertEquals(totalPrice,ProductQuantity*actualPrice);
+        Assert.assertEquals(totalPrice,PRODUCT_QUANTITY*actualPrice);
     }
 }

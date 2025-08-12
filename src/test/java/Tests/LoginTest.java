@@ -1,18 +1,18 @@
-package Tests;
+package tests;
 
-import Pages.LoginAndSignupPage;
-import Pages.NavigationBar;
+import pages.LoginAndSignupPage;
+import pages.NavigationBar;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 
-import static Helpers.TestData.*;
-import static Pages.LoginAndSignupPage.LoginErrorMsg;
-import static Pages.NavigationBar.LoggedInUserNavBtn;
+import static utilities.TestData.*;
+import static pages.LoginAndSignupPage.LoginErrorMsg;
+import static pages.NavigationBar.LoggedInUserNavBtn;
 
-public class Login extends BaseTest{
+public class LoginTest extends TestBase {
     @Test(priority = 4)
     public void verify_login_with_valid_email_and_password() {
         NavigationBar navigationBar = new NavigationBar(driver);
