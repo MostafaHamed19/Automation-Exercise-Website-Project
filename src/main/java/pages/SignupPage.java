@@ -29,7 +29,6 @@ public class SignupPage extends BasePage {
     By MobileNumberField = By.id("mobile_number");
     By CreateAccountButton = By.cssSelector("button[data-qa='create-account']");
     By ContinueButton = By.linkText("Continue");
-
     By CreatedAccountMessage = By.cssSelector("h2[data-qa='account-created']");
 
     public SignupPage EnterValidCredentials(char gender,String name,String password,int days,String months,int years,
