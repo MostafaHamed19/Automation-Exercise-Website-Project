@@ -14,10 +14,15 @@ public class NavigationBar extends BasePage{
     By CartPageNavBtn = By.linkText("Cart");
     public static By LoggedInUserNavBtn = By.partialLinkText("Logged in");
 
-    public void ClickOnLoginAndSignUpPageNavBtn() {
+    public LoginAndSignupPage ClickOnLoginAndSignUpPageNavBtn()
+    {
         driver.findElement(LoginAndSignUpPageNavBtn).click();
+        return new LoginAndSignupPage(driver);
     }
-    public void ClickOnProductPageNavBtn(){ driver.findElement(ProductsPageNavBtn).click();}
+    public ProductPage ClickOnProductPageNavBtn(){
+        driver.findElement(ProductsPageNavBtn).click();
+        return new ProductPage(driver);
+    }
     public void ClickOnLogOutBtn() {
         driver.findElement(LogOutBtn).click();
     }

@@ -2,7 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class SignupPage extends BasePage {
     public SignupPage(WebDriver driver) {
@@ -26,11 +28,11 @@ public class SignupPage extends BasePage {
     By ZipcodeField = By.id("zipcode");
     By MobileNumberField = By.id("mobile_number");
     By CreateAccountButton = By.cssSelector("button[data-qa='create-account']");
-    By ContinueButton = By.cssSelector("button[data-qa='continue-button']");
+    By ContinueButton = By.linkText("Continue");
 
-    public static By CreatedAccountMessage = By.cssSelector("h2[data-qa='account-created']");
+    By CreatedAccountMessage = By.cssSelector("h2[data-qa='account-created']");
 
-    public void EnterValidCredentials(char gender,String name,String password,int days,String months,int years,
+    public SignupPage EnterValidCredentials(char gender,String name,String password,int days,String months,int years,
                                       String firstname,String lastname, String company,String firstAddress,
                                       String lastAddress,String country,String state,String city,int zipcode,String mobile) {
         if(gender=='m'||gender=='M')
@@ -58,12 +60,22 @@ public class SignupPage extends BasePage {
         driver.findElement(CityField).sendKeys(city);
         driver.findElement(ZipcodeField).sendKeys(String.valueOf(zipcode));
         driver.findElement(MobileNumberField).sendKeys(mobile);
+        return this;
     }
-    public void ClickOnCreateAccountButton() {
+    public SignupPage ClickOnCreateAccountButton() {
         driver.findElement(CreateAccountButton).click();
+        return this;
     }
     public void ClickOnContinueButton() {
         driver.findElement(ContinueButton).click();
+    }
+    public SignupPage VerifyCreatedAccountMessage() {
+        String actualResult = driver.findElement(CreatedAccountMessage).getText();
+        String expectedResult = "ACCOUNT CREATED!";
+        Assert.assertEquals(actualResult, expectedResult);
+        String actualMessageColor = driver.findElement(CreatedAccountMessage).getCssValue("color");
+        Assert.assertEquals(actualMessageColor, "rgba(0, 128, 0, 1)");
+        return this;
     }
 
 }
