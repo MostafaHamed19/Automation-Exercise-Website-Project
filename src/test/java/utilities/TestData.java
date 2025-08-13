@@ -7,6 +7,7 @@ public class TestData {
     public static final String VALID_PASSWORD = userData.getProperty("VALID_PASSWORD");
     public static final String EXISTING_EMAIL = userData.getProperty("EXISTING_EMAIL");
     public static final String UNIQUE_EMAIL = System.currentTimeMillis() + userData.getProperty("UNIQUE_EMAIL");
+    public static final String EMAIL = System.currentTimeMillis() + System.currentTimeMillis() + userData.getProperty("UNIQUE_EMAIL");
 
     public static final int BIRTH_DAY = Integer.parseInt(userData.getProperty("BIRTH_DAY"));
     public static final String BIRTH_MONTH = userData.getProperty("BIRTH_MONTH");

@@ -1,0 +1,53 @@
+2025-08-13 23:35:17.440 [main] INFO  endtoend.EndToEndTest - Starting End-to-End Test flow.
+2025-08-13 23:35:17.455 [main] INFO  endtoend.EndToEndTest - Step 1: Starting new user registration.
+2025-08-13 23:35:27.140 [main] INFO  endtoend.EndToEndTest - User registered successfully.
+2025-08-13 23:35:27.142 [main] INFO  endtoend.EndToEndTest - Step 2: Logging out of the newly created account.
+2025-08-13 23:35:28.587 [main] INFO  endtoend.EndToEndTest - User logged out successfully.
+2025-08-13 23:35:28.588 [main] INFO  endtoend.EndToEndTest - Step 3: Logging in with an existing account.
+2025-08-13 23:35:32.645 [main] INFO  endtoend.EndToEndTest - User logged in successfully.
+2025-08-13 23:35:32.646 [main] INFO  endtoend.EndToEndTest - Step 4: Searching for a product and adding it to the cart.
+2025-08-13 23:35:43.197 [main] INFO  endtoend.EndToEndTest - Product added to the cart successfully. 
+2025-08-13 23:35:43.197 [main] INFO  endtoend.EndToEndTest - Step 5: Proceeding to checkout and placing the order.
+2025-08-13 23:35:50.906 [main] INFO  endtoend.EndToEndTest - Order placed and verified successfully.
+2025-08-13 23:35:50.908 [main] INFO  endtoend.EndToEndTest - End-to-End Test finished successfully.
+2025-08-13 23:35:59.425 [main] INFO  tests.AddToCartTest - Starting 'Add to Cart' test.
+2025-08-13 23:35:59.425 [main] INFO  tests.AddToCartTest - Clicking on 'Products' page navigation button.
+2025-08-13 23:36:05.186 [main] INFO  tests.AddToCartTest - 'Add to Cart' test finished successfully.
+2025-08-13 23:36:12.080 [main] INFO  tests.CheckOutTest - Starting 'Checkout' test.
+2025-08-13 23:36:12.080 [main] INFO  tests.CheckOutTest - Navigating to login page.
+2025-08-13 23:36:13.396 [main] INFO  tests.CheckOutTest - Logging in with existing user credentials.
+2025-08-13 23:36:16.794 [main] INFO  tests.CheckOutTest - Navigating to products page.
+2025-08-13 23:36:18.936 [main] INFO  tests.CheckOutTest - Adding the product to cart.
+2025-08-13 23:36:19.329 [main] INFO  tests.CheckOutTest - Viewing the cart to proceed to checkout.
+2025-08-13 23:36:20.971 [main] INFO  tests.CheckOutTest - Proceeding to checkout from the cart.
+2025-08-13 23:36:22.614 [main] INFO  tests.CheckOutTest - Placing the order.
+2025-08-13 23:36:23.616 [main] INFO  tests.CheckOutTest - Filling in payment card information.
+2025-08-13 23:36:24.657 [main] INFO  tests.CheckOutTest - Clicking the payment button.
+2025-08-13 23:36:27.095 [main] INFO  tests.CheckOutTest - Verifying order success message.
+2025-08-13 23:36:27.406 [main] INFO  tests.CheckOutTest - 'Checkout' test finished successfully.
+2025-08-13 23:36:33.080 [main] INFO  tests.LoginTest - Starting 'Login with wrong email and wrong password' test.
+2025-08-13 23:36:37.909 [main] INFO  tests.LoginTest - 'Login with wrong email and wrong password' test finished successfully.
+2025-08-13 23:36:37.919 [main] INFO  tests.LoginTest - Starting 'Login with wrong email and valid password' test.
+2025-08-13 23:36:40.451 [main] INFO  tests.LoginTest - 'Login with wrong email and valid password' test finished successfully.
+2025-08-13 23:36:40.464 [main] INFO  tests.LoginTest - Starting 'Login with valid email and wrong password' test.
+2025-08-13 23:36:42.699 [main] INFO  tests.LoginTest - 'Login with valid email and wrong password' test finished successfully.
+2025-08-13 23:36:42.710 [main] INFO  tests.LoginTest - Starting 'Login with valid credentials' test.
+2025-08-13 23:36:54.229 [main] INFO  tests.LoginTest - 'Login with valid credentials' test finished successfully.
+2025-08-13 23:37:00.991 [main] INFO  tests.ProductDetailsTest - Starting 'Verify Product Details' test.
+2025-08-13 23:37:00.994 [main] INFO  tests.ProductDetailsTest - Navigating to the Products Page.
+2025-08-13 23:37:04.065 [main] INFO  tests.ProductDetailsTest - Clicking on the product's details.
+2025-08-13 23:37:05.347 [main] INFO  tests.ProductDetailsTest - Getting product name and price from the Product Details page.
+2025-08-13 23:37:05.421 [main] INFO  tests.ProductDetailsTest - 'Verify Product Details' test finished successfully.
+2025-08-13 23:37:09.949 [main] INFO  tests.RegistrationTest - Starting 'Register with Existing Email' test.
+2025-08-13 23:37:13.412 [main] INFO  tests.RegistrationTest - Attempting to register with an existing email. 
+2025-08-13 23:37:14.943 [main] INFO  tests.RegistrationTest - Asserting that the 'Email already exist' error message is visible.
+2025-08-13 23:37:15.177 [main] INFO  tests.RegistrationTest - 'Register with Existing Email' test finished successfully.
+2025-08-13 23:37:15.186 [main] INFO  tests.RegistrationTest - Starting 'Valid Registration' test.
+2025-08-13 23:37:15.186 [main] INFO  tests.RegistrationTest - Navigating to signup page and filling registration data.
+2025-08-13 23:37:30.555 [main] INFO  tests.RegistrationTest - Verifying account creation and logging out.
+2025-08-13 23:37:32.233 [main] INFO  tests.RegistrationTest - 'Valid Registration' test finished successfully.
+2025-08-13 23:37:36.525 [main] INFO  tests.SearchTest - Starting 'Search on Product' test.
+2025-08-13 23:37:36.526 [main] INFO  tests.SearchTest - Navigating to the Products page.
+2025-08-13 23:37:41.496 [main] INFO  tests.SearchTest - Searching for product. 
+2025-08-13 23:37:43.347 [main] INFO  tests.SearchTest - Asserting that the product is displayed in the search results.
+2025-08-13 23:37:43.651 [main] INFO  tests.SearchTest - 'Search on Product' test finished successfully.
